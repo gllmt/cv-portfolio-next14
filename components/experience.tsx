@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "./section-heading";
 import {
   VerticalTimeline,
@@ -13,6 +13,10 @@ import { useSectionInView } from "@/lib/hooks";
 export default function Experience() {
   const { ref, inView } = useSectionInView("Experience", 0.3);
 
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => { if (inView && !hasAnimated) { setHasAnimated(true); } }, [hasAnimated, inView]);
+
   return (
     <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>My Experiences</SectionHeading>
@@ -21,7 +25,7 @@ export default function Experience() {
           experiencesData.map((item, index) => (
             <React.Fragment key={index}>
               <VerticalTimelineElement
-                visible={inView}
+                visible={hasAnimated ? true : inView}
                 contentStyle={{ 
                   background: '#f3f4f6', 
                   boxShadow: 'none',
