@@ -83,7 +83,7 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition cursor-pointer border border-black/6"
-          href="/CV.pdf"
+          href="/CV-Pierre-Guillemot-Developpeur-Frontend.pdf"
           download
         >
           Download CV{" "}
