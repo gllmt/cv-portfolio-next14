@@ -12,7 +12,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Pierre | CV | Portfolio",
-  description: "Pierre is a frontend|fullstack developer with 7 years of experience, based in France.",
+  description:
+    "Pierre is a frontend|fullstack developer with 6 years of experience, based in France.",
 };
 
 export default function RootLayout({
@@ -22,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}>
+      <body
+        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+      >
         <div className="bg-[#e2fbf3] absolute top-[-6rem] right-[11rem] -z-10 w-[31.25rem] h-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#57538b]"></div>
         <div className="bg-[#dbe7fb] absolute top-[-1rem] left-[-35rem] -z-10 w-[50rem] h-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#5048a0]"></div>
         <ThemeContextProvider>

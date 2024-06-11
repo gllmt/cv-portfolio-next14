@@ -17,10 +17,9 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-
       <SectionHeading>About Me</SectionHeading>
 
-      <p className="mb-3 px-5 sm:px-0">
+      <p className="mb-3 px-5 sm:px-0 text-balance">
         After graduating with a degree in{" "}
         <span className="font-medium">Photography</span>, I decided to pursue my
         passion for programming. I enrolled in a coding bootcamp and learned{" "}
@@ -30,7 +29,7 @@ export default function About() {
         feeling of finally figuring out a solution to a problem. My core stack
         is{" "}
         <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
+          React, Next.js, Node.js, Wordpress or Prismic
         </span>
         . I am also familiar with TypeScript and Prisma. I am always looking to
         learn new technologies. I am currently looking for a{" "}
@@ -38,13 +37,13 @@ export default function About() {
         developer.
       </p>
 
-      <p className="mb-0 px-5 sm:px-0">
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{" "}
+      <p className="mb-0 px-5 sm:px-0 text-balance">
+        <span className="italic">When I'm not coding</span>, I enjoy hiking,
+        watching movies, playing video games. I also enjoy{" "}
         <span className="font-medium">learning new things</span>. I am currently
         learning about{" "}
-        <span className="font-medium">history and philosophy.</span>
+        <span className="font-medium">Artificial intelligence (AI).</span>
       </p>
     </motion.section>
-  )
+  );
 }
