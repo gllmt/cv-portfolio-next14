@@ -6,10 +6,15 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useLenis } from "lenis/react";
 
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const lenis = useLenis(({ scroll }) => {
+    // called every scroll
+    // console.log(scroll);
+  });
 
   return (
     <header className="z-[99] relative">
@@ -37,6 +42,7 @@ export default function Header() {
                 )}
                 href={link.hash}
                 onClick={() => {
+                  lenis?.scrollTo(link.hash, { offset: -100 });
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
