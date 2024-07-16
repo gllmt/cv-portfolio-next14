@@ -35,7 +35,7 @@ export default function Experience() {
               visible={hasAnimated ? true : inView}
               contentStyle={{
                 background:
-                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                  theme === "light" ? "white" : "rgba(255, 255, 255, 0.05)",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
@@ -76,6 +76,14 @@ export default function Experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
+      <div className="flex justify-center items-center mt-10">
+        <Link
+          href="https://www.linkedin.com/in/gllmt/"
+          className="font-semibold capitalize text-gray-500 dark:text-gray-300 hover:text-gray-950 dark:hover:text-gray-50 transition"
+        >
+          View more
+        </Link>
+      </div>
     </section>
   );
 }
