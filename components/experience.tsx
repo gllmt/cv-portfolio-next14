@@ -76,6 +76,14 @@ export default function Experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
+      <div className="flex justify-center items-center mt-10">
+        <Link
+          href="https://www.linkedin.com/in/gllmt/"
+          className="font-semibold capitalize text-gray-500 dark:text-gray-300 hover:text-gray-950 dark:hover:text-gray-50 transition"
+        >
+          View more
+        </Link>
+      </div>
     </section>
   );
 }
