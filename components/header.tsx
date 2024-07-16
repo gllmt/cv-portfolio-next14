@@ -32,35 +32,67 @@ export default function Header() {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
-              <Link
-                className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
-                  {
-                    "text-gray-950 dark:text-gray-500 dark:hover:text-gray-800":
-                      activeSection === link.name,
-                  }
-                )}
-                href={link.hash}
-                onClick={() => {
-                  lenis?.scrollTo(link.hash, { offset: -100 });
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
+              {link.name === "Home" ? (
+                <Link
+                  className={clsx(
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                    {
+                      "text-gray-950 dark:text-gray-500 dark:hover:text-gray-800":
+                        activeSection === link.name,
+                    }
+                  )}
+                  href={link.hash}
+                  onClick={() => {
+                    lenis?.scrollTo(link.hash, { offset: -150 });
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
+                >
+                  {link.name}
 
-                {link.name === activeSection && (
-                  <motion.span
-                    className="bg-slate-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-200 dark:text-slate-500"
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
+                  {link.name === activeSection && (
+                    <motion.span
+                      className="bg-slate-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-200 dark:text-slate-500"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    ></motion.span>
+                  )}
+                </Link>
+              ) : (
+                <Link
+                  className={clsx(
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                    {
+                      "text-gray-950 dark:text-gray-500 dark:hover:text-gray-800":
+                        activeSection === link.name,
+                    }
+                  )}
+                  href={link.hash}
+                  onClick={() => {
+                    lenis?.scrollTo(link.hash, { offset: -100 });
+                    setActiveSection(link.name);
+                    setTimeOfLastClick(Date.now());
+                  }}
+                >
+                  {link.name}
+
+                  {link.name === activeSection && (
+                    <motion.span
+                      className="bg-slate-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-200 dark:text-slate-500"
+                      layoutId="activeSection"
+                      transition={{
+                        type: "spring",
+                        stiffness: 380,
+                        damping: 30,
+                      }}
+                    ></motion.span>
+                  )}
+                </Link>
+              )}
             </motion.li>
           ))}
         </ul>

@@ -1,10 +1,11 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import lcaImg from "@/public/capture-lca.webp";
+import glistenImg from "@/public/capture-glisten.webp";
+import fIImg from "@/public/capture-Fi.webp";
+import logoAdveris from "@/public/adveris-logo.webp";
+import logoPierre from "@/public/pierre-logo.webp";
+import logoW2p from "@/public/logow2p.webp";
 
 export const links = [
   {
@@ -41,6 +42,8 @@ export const experiencesData = [
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prismic and more. I'm open to full-time opportunities.",
     icon: React.createElement(CgWorkAlt),
     date: "2023 - Present",
+    logoImg: logoPierre,
+    link: "https://www.pierreguillemot.com/",
   },
   {
     title: "Front-End Developer",
@@ -49,6 +52,8 @@ export const experiencesData = [
       "I worked as a confirmed front-end developer at Adveris on around fifteen full-stack projects with Next.js, Wordpress and Symfony...",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2023",
+    logoImg: logoAdveris,
+    link: "https://www.adveris.com/",
   },
   {
     title: "Front-End Developer",
@@ -57,30 +62,35 @@ export const experiencesData = [
       "I worked as a front-end developer at W2P Digital, which has since been renamed Supercolor. I was involved in a variety of web projects, primarily utilizing WordPress and Vue.js.",
     icon: React.createElement(CgWorkAlt),
     date: "2021 - 2022",
+    logoImg: logoW2p,
+    link: "https://www.supercolor.cool/",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "La Conciergerie Administrative",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked as a full-stack developer. It's a website for a services company that offers administrative services to companies.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Node.js"],
+    imageUrl: lcaImg,
+    link: "https://lca.pierreguillemot.dev/",
   },
   {
-    title: "rmtDev",
+    title: "Glisten AI",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Glisten AI is a web app that uses AI to help you listen to your music. It's a project I made for fun and to learn more about AI.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Prismic"],
+    imageUrl: glistenImg,
+    link: "https://dark-modern-animated-website.vercel.app/",
   },
   {
-    title: "Word Analytics",
+    title: "Finance Innovation",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "As a full-stack developer at Adveris, I developed this website in collaboration with a web designer. It's good example and I find it a great success.",
+    tags: ["Twig", "JavaScript", "Wordpress", "PHP", "gsap"],
+    imageUrl: fIImg,
+    link: "https://finance-innovation.org/",
   },
 ] as const;
 
