@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 ::selection {
-  background-color:#1d1d1d;
-  color:#fff;
+  background-color: #1d1d1d;
+  color: #fff;
 }
 
 html {
@@ -18,4 +17,8 @@ html.dark {
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+.vertical-timeline:before {
+  border-radius: 4px;
 }
