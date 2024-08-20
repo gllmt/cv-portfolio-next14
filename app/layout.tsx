@@ -12,7 +12,7 @@ import LenisScroll from "@/components/LenisScroll";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pierre | CV | Portfolio",
+  title: "Pierre | Portfolio",
   description:
     "Pierre is a frontend|fullstack developer with 6 years of experience, based in France.",
 };
@@ -25,12 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} relative bg-gray-100 text-gray-950 pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 antialiased`}
+        className={`${inter.className} relative bg-gray-100 text-gray-950 pt-28 sm:pt-36 dark:bg-[#070940] dark:text-gray-50 dark:text-opacity-90 antialiased`}
       >
-        {/* <div className="relative wrapper"> */}
         <LenisScroll>
-          <div className="bg-[#e2fbf3] absolute top-[-6rem] right-[11rem] -z-10 w-[31.25rem] h-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#57538b]"></div>
-          <div className="bg-[#dbe7fb] absolute top-[-1rem] left-[-35rem] -z-10 w-[50rem] h-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#5048a0]"></div>
+          <div className="bg-[#e2fbf3] absolute top-[-6rem] right-[11rem] -z-10 w-[31.25rem] h-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#1a1193]"></div>
+          <div className="bg-[#dbe7fb] absolute top-[-1rem] left-[-35rem] -z-10 w-[50rem] h-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#1f0dcb]"></div>
           <ThemeContextProvider>
             <ActiveSectionContextProvider>
               <Header />
@@ -41,7 +40,6 @@ export default function RootLayout({
             </ActiveSectionContextProvider>
           </ThemeContextProvider>
         </LenisScroll>
-        {/* </div> */}
       </body>
     </html>
   );

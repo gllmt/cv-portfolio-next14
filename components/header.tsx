@@ -22,7 +22,7 @@ export default function Header() {
     <header className="z-[99] relative">
       {pathname === "/" ? (
         <motion.div
-          className="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[4.5rem] rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:w-[36rem] sm:h-[3.25rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
+          className="fixed top-0 left-1/2 -translate-x-1/2 w-full h-[4.5rem] rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:w-[36rem] sm:h-[3.25rem] sm:rounded-full dark:bg-gray-900 dark:border-black/10 dark:bg-opacity-100"
           initial={{ y: -100, x: "-50%", opacity: 0 }}
           animate={{ y: 0, x: "-50%", opacity: 1 }}
         ></motion.div>
@@ -42,9 +42,9 @@ export default function Header() {
                 {link.name === "Home" ? (
                   <Link
                     className={clsx(
-                      "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                      "flex w-full items-center justify-center px-3 py-3 hover:text-gray-500 transition dark:text-gray-500 dark:hover:text-gray-300",
                       {
-                        "text-gray-950 dark:text-gray-500 dark:hover:text-gray-800":
+                        "text-gray-100 dark:text-gray-100 dark:hover:text-gray-100":
                           activeSection === link.name,
                       }
                     )}
@@ -59,7 +59,7 @@ export default function Header() {
 
                     {link.name === activeSection && (
                       <motion.span
-                        className="bg-slate-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-200 dark:text-slate-500"
+                        className="bg-gray-900 rounded-full absolute inset-0 -z-10 dark:bg-[#2a2683] dark:text-slate-100"
                         layoutId="activeSection"
                         transition={{
                           type: "spring",
@@ -72,9 +72,9 @@ export default function Header() {
                 ) : (
                   <Link
                     className={clsx(
-                      "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                      "flex w-full items-center justify-center px-3 py-3 hover:text-gray-400 transition dark:text-gray-500 dark:hover:text-gray-300",
                       {
-                        "text-gray-950 dark:text-gray-500 dark:hover:text-gray-800":
+                        "text-gray-100 dark:text-gray-100 hover:text-gray-300 dark:hover:text-gray-100":
                           activeSection === link.name,
                       }
                     )}
@@ -89,7 +89,7 @@ export default function Header() {
 
                     {link.name === activeSection && (
                       <motion.span
-                        className="bg-slate-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-200 dark:text-slate-500"
+                        className="bg-gray-900 rounded-full absolute inset-0 -z-10 dark:bg-[#2a2683] dark:text-slate-500"
                         layoutId="activeSection"
                         transition={{
                           type: "spring",
@@ -110,11 +110,11 @@ export default function Header() {
             >
               <Link
                 href="/"
-                className="flex w-full items-center justify-center px-5 py-4 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-900"
+                className="flex w-full items-center justify-center px-5 py-4 hover:text-gray-950 transition dark:text-gray-100 dark:hover:text-gray-300"
               >
                 Home
                 <motion.span
-                  className="bg-slate-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-200 dark:text-slate-500"
+                  className="bg-slate-100 rounded-full absolute inset-0 -z-10 dark:bg-[#2a2683] dark:text-slate-100"
                   transition={{
                     type: "spring",
                     stiffness: 380,
