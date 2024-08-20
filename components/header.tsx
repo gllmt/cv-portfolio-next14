@@ -110,11 +110,11 @@ export default function Header() {
             >
               <Link
                 href="/"
-                className="flex w-full items-center justify-center px-5 py-4 hover:text-gray-950 transition dark:text-gray-100 dark:hover:text-gray-300"
+                className="flex w-full items-center justify-center px-5 py-4 text-slate-100 hover:text-gray-300 transition dark:text-gray-100 dark:hover:text-gray-300"
               >
                 Home
                 <motion.span
-                  className="bg-slate-100 rounded-full absolute inset-0 -z-10 dark:bg-[#2a2683] dark:text-slate-100"
+                  className="bg-gray-900 rounded-full absolute inset-0 -z-10 dark:bg-[#2a2683] dark:text-slate-100"
                   transition={{
                     type: "spring",
                     stiffness: 380,
